@@ -1,29 +1,17 @@
 #include "observer_barchartview.h"
 #include "observer_piechartview.h"
 #include "observer_tableview.h"
-#include <fmt/printf.h>
-
-
-observer::ViewElement observer::BarChartView::Id() {
-  return observer::ViewElement::kBarChartView;
-}
+#include <format>
+#include <iostream>
 
 void observer::BarChartView::Update() {
-  fmt::println("Update of {:>12s}.", "BarChartView");
-}
-
-observer::ViewElement observer::PieChartView::Id() {
-  return observer::ViewElement::kPieChartView;
+  std::cout << std::format("Update of {:>12s}.\n", "BarChartView");
 }
 
 void observer::PieChartView::Update() {
-  fmt::println("Update of {:>12s}.", "PieChartView");
-}
-
-observer::ViewElement observer::TableView::Id() {
-  return observer::ViewElement::kTableView;
+  std::cout << std::format("Update of {:>12s}.\n", "PieChartView");
 }
 
 void observer::TableView::Update() {
-  fmt::println("Update of {:>12s}.", "TableView");
+  std::cout << std::format("Update of {:>12s}.\n", "TableView");
 }

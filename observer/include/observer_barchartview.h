@@ -9,13 +9,12 @@ namespace observer {
 class BarChartView : public ObserverInterface {
  public:
   explicit BarChartView(SpreadsheetModel &model) : model_{model} {}
-  ViewElement Id() override;
   void Update() override;
 
-private:
+ private:
   SpreadsheetModel &model_;
 };
 
-}
+} // namespace observer
 
 #endif // OBSERVER_BARCHARTVIEW_H_

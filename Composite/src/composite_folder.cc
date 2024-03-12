@@ -1,16 +1,15 @@
 #include "composite_folder.h"
+#include <format>
 #include <iostream>
 
-namespace component {
-
-void Folder::Search(std::string_view keyword) {
-  std::cout << "在文件夹" << this->name_ << "中递归搜索关键" << keyword
-            << std::endl;
-  for (const auto &component : components_) {
+void composite::Folder::Search(std::string_view keyword) {
+  std::cout << std::format("Recursively search for {} in the folder {}\n",
+                           keyword, this->name_);
+  for (const auto &component: components_) {
     component->Search(keyword);
   }
 }
 
-inline void Folder::Add(ComponentPtr &c) { this->components_.push_back(c); }
-
+void composite::Folder::Add(ComponentInterfacePtr c) {
+  this->components_.push_back(std::move(c));
 }

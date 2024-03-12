@@ -2,7 +2,8 @@
 #include "abstract_factory_diamond.h"
 #include "abstract_factory_gold.h"
 #include "abstract_factory_pig_with_diamond.h"
-#include <fmt/printf.h>
+#include <format>
+#include <iostream>
 #include <memory>
 
 namespace abstract_factory {
@@ -23,15 +24,16 @@ HighLevelMineralPtr PositiveMineralFactory::CreateHighLevel(uint32_t x,
 }
 
 void Gold::Display() {
-  fmt::println("{:<16s} in ({:4d}, {:3d})", "gold", x_, y_);
+  std::cout << std::format("{:<16s} in ({:4d}, {:3d})\n", "gold", x_, y_);
 }
 
 void Diamond::Display() {
-  fmt::println("{:<16s} in ({:4d}, {:3d})", "diamond", x_, y_);
+  std::cout << std::format("{:<16s} in ({:4d}, {:3d})\n", "diamond", x_, y_);
 }
 
 void PigWithDiamond::Display() {
-  fmt::println("{:<16s} in ({:4d}, {:3d})", "pig with diamond", x_, y_);
+  std::cout << std::format("{:<16s} in ({:4d}, {:3d})\n", "pig with diamond",
+                           x_, y_);
 }
 
 } // namespace abstract_factory

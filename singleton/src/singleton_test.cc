@@ -1,12 +1,13 @@
 #include "singleton_sun.h"
-#include <fmt/printf.h>
+#include <format>
+#include <iostream>
 
 int main() {
   auto &s0{singleton::Sun::GetInstance()};
   auto &s1{singleton::Sun::GetInstance()};
 
-  fmt::println("{:p}\n", static_cast<void *>(&s0));
-  fmt::println("{:p}\n", static_cast<void *>(&s1));
+  std::cout << std::format("{:p}\n", static_cast<void *>(&s0));
+  std::cout << std::format("{:p}\n", static_cast<void *>(&s1));
 
   // singleton::Sun s2 = s1;
 

@@ -2,7 +2,8 @@
 #include "abstract_factory_bomb.h"
 #include "abstract_factory_sack.h"
 #include "abstract_factory_stone.h"
-#include <fmt/printf.h>
+#include <format>
+#include <iostream>
 #include <memory>
 
 namespace abstract_factory {
@@ -23,15 +24,15 @@ HighLevelMineralPtr NegativeMineralFactory::CreateHighLevel(uint32_t x,
 }
 
 void Sack::Display() {
-  fmt::println("{:<16s} in ({:4d}, {:3d})", "sack", x_, y_);
+  std::cout << std::format("{:<16s} in ({:4d}, {:3d})\n", "sack", x_, y_);
 }
 
 void Stone::Display() {
-  fmt::println("{:<16s} in ({:4d}, {:3d})", "stone", x_, y_);
+  std::cout << std::format("{:<16s} in ({:4d}, {:3d})\n", "stone", x_, y_);
 }
 
 void Bomb::Display() {
-  fmt::println("{:<16s} in ({:4d}, {:3d})", "bomb", x_, y_);
+  std::cout << std::format("{:<16s} in ({:4d}, {:3d})\n", "bomb", x_, y_);
 }
 
 } // namespace abstract_factory

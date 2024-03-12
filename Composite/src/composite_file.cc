@@ -1,13 +1,8 @@
 #include "composite_file.h"
 #include <iostream>
+#include <format>
 
-namespace component {
-
-inline std::string_view File::name() { return this->name_; }
-
-void File::Search(std::string_view keyword) {
-  std::cout << "在文件" << this->name_ << "中递归搜索关键" << keyword
-            << std::endl;
+void composite::File::Search(std::string_view keyword) {
+  std::cout << std::format("Recursively search for {} in the file {}\n",
+                           keyword, this->name_);
 }
-
-};

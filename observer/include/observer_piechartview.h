@@ -9,13 +9,12 @@ namespace observer {
 class PieChartView : public ObserverInterface {
  public:
   explicit PieChartView(SpreadsheetModel &model) : model_{model} {}
-  ViewElement Id() override;
   void Update() override;
 
  private:
   SpreadsheetModel &model_;
 };
 
-}
+} // namespace observer
 
 #endif // OBSERVER_PIECHARTVIEW_H_

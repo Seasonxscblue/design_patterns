@@ -1,24 +1,24 @@
 #ifndef COMPOSITE_FOLDER_H_
 #define COMPOSITE_FOLDER_H_
 
-#include "composite_componentinterface.h"
+#include "composite_component_interface.h"
 #include <vector>
 
-namespace component {
+namespace composite {
 
 class Folder : public ComponentInterface {
-public:
+ public:
   Folder(std::string_view name) : name_{name} {}
   ~Folder() = default;
+  void Add(ComponentInterfacePtr c);
   void Search(std::string_view keyword) override;
-  void Add(ComponentInterface &c);
 
-private:
+ private:
   std::string_view name_;
-  std::vector<ComponentInterface> components_;
+  std::vector<ComponentInterfacePtr> components_;
 };
 
-using FolderPtr = std::shared_ptr<Folder>;
+using FolderPtr = std::unique_ptr<Folder>;
 
 }; // namespace component
 

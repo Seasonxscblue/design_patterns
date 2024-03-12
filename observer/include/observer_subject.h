@@ -20,6 +20,6 @@ class Subject {
   std::vector<ObserverInterfacePtr> observers_;
 };
 
-}
+} // namespace observer
 
 #endif // OBSERVER_SUBJECT_H_

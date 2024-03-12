@@ -1,12 +1,16 @@
 #include "template_method_coffee.h"
-#include <fmt/printf.h>
+#include <format>
 #include <iostream>
 
 namespace template_method {
 
-void Coffee::Brew() { fmt::println("Dripping coffee through filter"); }
+void Coffee::Brew() {
+  std::cout << std::format("Dripping coffee through filter\n");
+}
 
-void Coffee::AddCondiments() { fmt::println("Adding Sugar and Milk"); }
+void Coffee::AddCondiments() {
+  std::cout << std::format("Adding Sugar and Milk\n");
+}
 
 bool Coffee::CustomerWantsCondiments() {
   const char answer{GetUserInput()};
@@ -17,7 +21,8 @@ bool Coffee::CustomerWantsCondiments() {
 }
 
 const char Coffee::GetUserInput() {
-  fmt::print("Would you like milk and sugar with your coffee (y/n) ? ");
+  std::cout << std::format(
+      "Would you like milk and sugar with your coffee (y/n) ? ");
   char answer;
   std::cin >> answer;
   return answer;

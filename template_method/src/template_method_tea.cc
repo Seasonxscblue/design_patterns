@@ -1,12 +1,12 @@
 #include "template_method_tea.h"
-#include <fmt/printf.h>
+#include <format>
 #include <iostream>
 
 namespace template_method {
 
-void Tea::Brew() { fmt::println("Stepping the tea"); }
+void Tea::Brew() { std::cout << std::format("Stepping the tea\n"); }
 
-void Tea::AddCondiments() { fmt::println("Adding Lemon"); }
+void Tea::AddCondiments() { std::cout << std::format("Adding Lemon\n"); }
 
 bool Tea::CustomerWantsCondiments() {
   const char answer{GetUserInput()};
@@ -17,7 +17,7 @@ bool Tea::CustomerWantsCondiments() {
 }
 
 const char Tea::GetUserInput() {
-  fmt::print("Would you like lemon with your tea (y/n) ? ");
+  std::cout << std::format("Would you like lemon with your tea (y/n) ? ");
   char answer;
   std::cin >> answer;
   return answer;

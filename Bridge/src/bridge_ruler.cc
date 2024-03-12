@@ -1,14 +1,14 @@
 #include "bridge_circle_ruler.h"
 #include "bridge_square_ruler.h"
 #include "bridge_triangle_ruler.h"
-#include <fmt/printf.h>
+#include <iostream>
 
 namespace bridge {
 
-void CircleRuler::Regularize() { fmt::println("circle"); }
+void CircleRuler::Regularize() { std::cout << "circle" << std::endl; }
 
-void SquareRuler::Regularize() { fmt::println("square"); }
+void SquareRuler::Regularize() { std::cout << "square" << std::endl; }
 
-void TriangleRuler::Regularize() { fmt::println("triangle"); }
+void TriangleRuler::Regularize() { std::cout << "triangle" << std::endl; }
 
 } // namespace bridge

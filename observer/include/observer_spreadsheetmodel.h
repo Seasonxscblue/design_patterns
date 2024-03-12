@@ -15,6 +15,6 @@ class SpreadsheetModel : public Subject {
                        const double value);
 };
 
-}
+} // namespace observer
 
 #endif // OBSERVER_SPREADSHEETMODEL_H_
