@@ -1,16 +1,15 @@
 #include "template_method_coffee.h"
 #include "template_method_tea.h"
-#include <format>
-#include <iostream>
+#include <print>
 
 int main() {
   template_method::Tea my_tea;
   template_method::Coffee my_coffee;
 
-  std::cout << std::format("Making tea ... \n");
+  std::println("Making tea ...");
   my_tea.PrepareRecipe();
 
-  std::cout << std::format("\nMaking coffee ... \n");
+  std::println("\nMaking coffee ...");
   my_coffee.PrepareRecipe();
   return 0;
 }

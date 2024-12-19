@@ -12,7 +12,6 @@ class Division : public StrategyInterface {
   double Calculate(double a, double b) override;
 };
 
-}
+}  // namespace strategy
 
-
-#endif // STRATEGY_DIVISION_H_
+#endif  // STRATEGY_DIVISION_H_

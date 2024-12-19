@@ -12,6 +12,6 @@ class Addition : public StrategyInterface {
   double Calculate(double a, double b) override;
 };
 
-}
+}  // namespace strategy
 
-#endif // STRATEGY_ADDITION_H_
+#endif  // STRATEGY_ADDITION_H_

@@ -15,6 +15,6 @@ class BarChartView : public ObserverInterface {
   SpreadsheetModel &model_;
 };
 
-} // namespace observer
+}  // namespace observer
 
-#endif // OBSERVER_BARCHARTVIEW_H_
+#endif  // OBSERVER_BARCHARTVIEW_H_

@@ -16,6 +16,6 @@ class Calculator {
   StrategyInterfacePtr strategy_;
 };
 
-}
+}  // namespace strategy
 
-#endif // STRATEGY_CALCULATOR_H_
+#endif  // STRATEGY_CALCULATOR_H_

@@ -12,6 +12,6 @@ class Subtraction : public StrategyInterface {
   double Calculate(double a, double b) override;
 };
 
-}
+}  // namespace strategy
 
-#endif // STRATEGY_SUBTRACTION_H_
+#endif  // STRATEGY_SUBTRACTION_H_

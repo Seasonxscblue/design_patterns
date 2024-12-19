@@ -15,4 +15,4 @@ class Sun {
 
 }
 
-#endif // SINGLETON_SUN_H_
+#endif  /** SINGLETON_SUN_H_ */

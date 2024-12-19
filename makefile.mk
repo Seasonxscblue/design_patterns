@@ -1,12 +1,17 @@
 ifndef TARGET
 TARGET:=design_pattern
 endif
-SRC:=$(wildcard $(shell pwd)/src/*.cc)
+
+WORKSPACE:=$(shell pwd)
+
+SRC:=$(wildcard $(WORKSPACE)/src/*.cc)
+
 OBJS:=$(patsubst %.cc, %.o, $(SRC))
-CXXFLAGS:=-I$(shell pwd)/include -I/usr/local/include -std=c++20
+
+CXXFLAGS:=-I$(WORKSPACE)/include -std=c++23
 
 $(TARGET):$(OBJS)
-	$(CXX) $^ -o $@ $(LIBS)
+	$(CXX) $^ -o $@
 
 clean:
 	$(RM) $(TARGET) $(OBJS)

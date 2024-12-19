@@ -12,6 +12,6 @@ class StrategyInterface {
 };
 
 using StrategyInterfacePtr = std::unique_ptr<StrategyInterface>;
-}
+}  // namespace strategy
 
-#endif // STRATEGT_STRATEGYINTERFACE_H_
+#endif  // STRATEGT_STRATEGYINTERFACE_H_

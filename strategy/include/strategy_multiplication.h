@@ -12,7 +12,6 @@ class Multiplication : public StrategyInterface {
   double Calculate(double a, double b) override;
 };
 
-}
+}  // namespace strategy
 
-
-#endif // STRATEGY_MULTIPLICATION_H_
+#endif  // STRATEGY_MULTIPLICATION_H_

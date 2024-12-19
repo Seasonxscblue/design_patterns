@@ -1,6 +1,6 @@
 #include "template_method_caffeine_beverage.h"
-#include <format>
-#include <iostream>
+
+#include <print>
 
 namespace template_method {
 
@@ -13,14 +13,10 @@ void CaffeineBeverage::PrepareRecipe() {
   }
 }
 
-void CaffeineBeverage::BoilWater() {
-  std::cout << std::format("Boiling water\n");
-}
+void CaffeineBeverage::BoilWater() { std::println("Boiling water\n"); }
 
-void CaffeineBeverage::PourInCup() {
-  std::cout << std::format("Pouring into cup\n");
-}
+void CaffeineBeverage::PourInCup() { std::println("Pouring into cup\n"); }
 
 bool CaffeineBeverage::CustomerWantsCondiments() { return true; }
 
-} // namespace template_method
+}  // namespace template_method
