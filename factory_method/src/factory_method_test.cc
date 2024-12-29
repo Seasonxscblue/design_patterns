@@ -5,8 +5,8 @@
 #include <ctime>
 #include <random>
 
-const uint32_t DEFAULT_WIDTH = 1024;
-const uint32_t DEFAULT_HEIGHT = 768;
+constexpr uint32_t DEFAULT_WIDTH = 1024;
+constexpr uint32_t DEFAULT_HEIGHT = 768;
 
 int main() {
   static auto e{std::default_random_engine{static_cast<uint32_t>(time(0))}};

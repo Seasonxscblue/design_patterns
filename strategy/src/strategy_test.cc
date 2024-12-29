@@ -1,5 +1,4 @@
-#include <format>
-#include <iostream>
+#include <print>
 
 #include "strategy_addition.h"
 #include "strategy_calculator.h"
@@ -11,16 +10,16 @@ int main() {
   auto calculator{strategy::Calculator{}};
 
   calculator.set_strategy(std::make_unique<strategy::Addition>());
-  std::cout << std::format("{}\n", calculator.GetResult(5, 0));
+  std::println("{}", calculator.GetResult(5, 0));
 
   calculator.set_strategy(std::make_unique<strategy::Subtraction>());
-  std::cout << std::format("{}\n", calculator.GetResult(5, 0));
+  std::println("{}", calculator.GetResult(5, 0));
 
   calculator.set_strategy(std::make_unique<strategy::Multiplication>());
-  std::cout << std::format("{}\n", calculator.GetResult(5, 0));
+  std::println("{}", calculator.GetResult(5, 0));
 
   calculator.set_strategy(std::make_unique<strategy::Division>());
-  std::cout << std::format("{}\n", calculator.GetResult(5, 0));
+  std::println("{}", calculator.GetResult(5, 0));
 
   return 0;
 }
